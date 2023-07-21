@@ -1,0 +1,74 @@
+To complete the tasks mentioned in the case study, you can follow the steps below. I will provide the Excel formulas and explanations for each task.
+
+**Task 1: Creating an Inventory Sheet**
+Create a new sheet in the workbook called "Inventory". On this sheet, create a table with columns for Product Name, Quantity in Stock, and Cost Price. Populate this table with the relevant data from the business owner's records.
+
+In the "Inventory" sheet, you can have the following table:
+
+| Product Name | Quantity in Stock | Cost Price |
+|--------------|-------------------|------------|
+| Product A    | 50                | 10         |
+| Product B    | 30                | 15         |
+| Product C    | 20                | 20         |
+| ...          | ...               | ...        |
+
+**Task 2: Creating a Sales Sheet**
+Create a new sheet in the workbook called "Sales". On this sheet, create a table with columns for Product Name, Quantity Sold, and Sale Price. Populate this table with the relevant data from the business owner's records.
+
+In the "Sales" sheet, you can have the following table:
+
+| Product Name | Quantity Sold | Sale Price |
+|--------------|---------------|------------|
+| Product A    | 10            | 25         |
+| Product B    | 5             | 30         |
+| Product C    | 8             | 40         |
+| ...          | ...           | ...        |
+
+**Task 3: Calculating Profit per Sale**
+Create a new column on the "Sales" sheet called "Profit per Sale". Use a formula to calculate the profit made on each sale, which is the difference between the sale price and the cost price of the product.
+
+In cell D2 of the "Sales" sheet (assuming Quantity Sold is in column B and Sale Price is in column C), you can use the following formula:
+
+`=C2 - VLOOKUP(A2, Inventory!A:B, 2, FALSE)`
+
+Explanation: The VLOOKUP function searches for the product name in the "Inventory" sheet and returns the cost price. The formula then subtracts the cost price from the sale price to calculate the profit per sale.
+
+**Task 4: Total Profit Calculation**
+Create a new sheet in the workbook called "Profit Summary". On this sheet, create a table with columns for Product Name, Quantity Sold, Sale Price, Cost Price, and Total Profit. Use a formula to calculate the total profit made on each product, which is the sum of the profits made on each sale of that product.
+
+In the "Profit Summary" sheet, you can have the following table:
+
+| Product Name | Quantity Sold | Sale Price | Cost Price | Total Profit |
+|--------------|---------------|------------|------------|--------------|
+| Product A    | 10            | 25         | 10         | 150          |
+| Product B    | 5             | 30         | 15         | 75           |
+| Product C    | 8             | 40         | 20         | 160          |
+| ...          | ...           | ...        | ...        | ...          |
+
+In cell E2 of the "Profit Summary" sheet, you can use the following formula:
+
+`=SUMIF(Sales!A:A, A2, Sales!D:D)`
+
+Explanation: The SUMIF function adds up all the values in column D (Profit per Sale) of the "Sales" sheet where the corresponding product name in column A matches the product name in the "Profit Summary" sheet.
+
+**Task 5: Filtering and Sorting Data**
+Add filtering and sorting functionality to the tables on the "Inventory" and "Sales" sheets. This will allow the business owner to easily find and analyze data.
+
+In Excel, you can select the table in the "Inventory" or "Sales" sheet and click on the Filter button in the Data tab. This will add filter arrows to the column headers, allowing the user to filter and sort the data easily.
+
+**Task 6: Creating Visualizations**
+Create charts and graphs on the "Profit Summary" sheet to visually represent the profits made on each product.
+
+You can create different types of charts, such as a bar chart or a pie chart, to visualize the total profit for each product. Simply select the data in the "Profit Summary" sheet and choose the appropriate chart type from the Insert tab.
+
+**Task 7: Updating Inventory**
+Create a form on the "Inventory" sheet that allows the business owner to update the quantity of each product in stock. This will ensure that the inventory data is always up-to-date.
+
+You can create a simple form using Excel's Data Validation feature. Add a column for "Update Quantity" in the "Inventory" sheet and set up data validation to allow only positive whole numbers. This way, the business owner can easily update the quantity of each product by entering the new value directly in the cell.
+
+**Task 8: Generating Reports**
+Create a report on the "Profit Summary" sheet that summarizes the profits made on each product and the total profit made by the business. This report should be automatically updated as new sales are added to the "Sales" sheet.
+
+You can create a report table in the "Profit Summary" sheet that displays the product names, quantities sold, sale prices, cost prices, and total profits. Use formulas to populate this table based on the data in the "Sales" sheet. As new sales data is added, the report will be automatically updated.
+
+By completing these tasks, you will have helped the business owner efficiently manage their inventory and track their profits using Excel. The automated calculations and visualizations will provide valuable insights to make informed business decisions.
